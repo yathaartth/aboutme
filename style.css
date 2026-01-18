@@ -1,32 +1,33 @@
 h1{
     color:indigo;
     text-decoration: goldenrod wavy underline;
-    font-family: 'Segoe UI';
-    font-size: 50px;
+    font-family: 'Algerian';
+    font-size: 100px;
     text-align: center;
 }
 .header{
     color:crimson;
     text-align: center;
+    font-size: 24px;
 }
 button{
-    color:darkmagenta;
-    background-color:aqua;
+    color:white;
+    background-color:lightsalmon;
 }
 body{
     background-color: bisque;
 }
 
-#details{
-    text-align: center;
-}
 p{
     line-height: 20px;
 }
+#details{
+    font-size: 24px;
+}
 div{
     text-align: center;
-    height: 200px;
-    width: 200px;
+    height: 280px;
+    width: 280px;
     background-color: burlywood;
     border-width: 2px;
     border-style: dotted;
@@ -34,6 +35,22 @@ div{
     border: 2px solid brown;
     border-radius: 10px; /*For circle make square use radius as 50%*/
     display: inline-block;
+    margin: 30px;
+    margin-right: 50px;
+}
+button{
+    margin-left: 25px;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 8px;
+}
+button:hover{
+    background-color: brown;
+    transform: scale(1.1);
+}
+a{
+    margin-left: 25px;
+    font-size: 20px;
 }
 #Box1{
     background-image: url("a.jpg");
@@ -43,11 +60,11 @@ div{
     background-image: url("b.jpg");
     background-size: cover;
 }
-#Box2{
+#Box3{
     background-image: url("c.jpg");
     background-size: cover;
 }   
-#Box2{
+#Box4{
     background-image: url("b.jpg");
     background-size: cover;
 }
