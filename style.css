@@ -1,0 +1,53 @@
+h1{
+    color:indigo;
+    text-decoration: goldenrod wavy underline;
+    font-family: 'Segoe UI';
+    font-size: 50px;
+    text-align: center;
+}
+.header{
+    color:crimson;
+    text-align: center;
+}
+button{
+    color:darkmagenta;
+    background-color:aqua;
+}
+body{
+    background-color: bisque;
+}
+
+#details{
+    text-align: center;
+}
+p{
+    line-height: 20px;
+}
+div{
+    text-align: center;
+    height: 200px;
+    width: 200px;
+    background-color: burlywood;
+    border-width: 2px;
+    border-style: dotted;
+    border-color: brown;
+    border: 2px solid brown;
+    border-radius: 10px; /*For circle make square use radius as 50%*/
+    display: inline-block;
+}
+#Box1{
+    background-image: url("a.jpg");
+    background-size: cover;
+}
+#Box2{
+    background-image: url("b.jpg");
+    background-size: cover;
+}
+#Box2{
+    background-image: url("c.jpg");
+    background-size: cover;
+}   
+#Box2{
+    background-image: url("b.jpg");
+    background-size: cover;
+}
