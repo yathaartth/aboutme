@@ -1,23 +1,60 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.navbar 
+{
+  background-color: brown;
+  padding: 20px 30px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links
+{
+  list-style: none; 
+  display: flex;
+  gap: 150px;
+  margin-left: 5%;
+}
+
+.nav-links a 
+{
+color: bisque;
+text-decoration: none;
+font-size: 20px;
+}
+
+.nav-links a:hover 
+{
+  text-decoration: underline;
+}
+  
 h1{
-    color:indigo;
-    text-decoration: goldenrod wavy underline;
+    color:brown;
+    text-decoration: brown wavy underline;
     font-family: 'Algerian';
-    font-size: 100px;
+    font-size: 80px;
     text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 .header{
-    color:crimson;
+    color:brown;
     text-align: center;
-    font-size: 24px;
+    font-size: 18px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 button{
     color:white;
-    background-color:lightsalmon;
+    background-color:burlywood;
 }
 body{
     background-color: bisque;
 }
-
 p{
     line-height: 20px;
 }
@@ -48,6 +85,9 @@ button:hover{
     background-color: brown;
     transform: scale(1.1);
 }
+#details{
+    padding: 10px;
+}
 a{
     margin-left: 25px;
     font-size: 20px;
@@ -67,4 +107,23 @@ a{
 #Box4{
     background-image: url("b.jpg");
     background-size: cover;
+}
+.footer{
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Times New Roman';
+    color: bisque;
+    background-color: brown;
+    padding: 10px;
+    margin-top: 20px;
+}
+#cprt{ 
+    font-size: 20px;
+}
+#fts{
+    font-size: 16px;
+}
+#ind{
+    font-size: 24px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
