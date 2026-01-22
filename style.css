@@ -127,3 +127,43 @@ a{
     font-size: 24px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+.skills-heading {
+  font-family: 'Comic Sans MS';
+  font-size: 72px;
+  text-decoration: none
+}
+
+.skills-page {
+  margin-left: 10px;
+  margin-left: 10px;
+  text-align: center;
+}
+
+.skills-container {
+  justify-content: center;
+  gap: 20px;
+}
+
+.skills-container:hover {
+  color: burlywood;
+}
+
+#BoxA{
+    background-image: url("The_C_Programming_Language_logo.svg.png");
+    background-size: cover;
+    background-color: bisque;
+    border: none;
+}
+#BoxB{
+    background-image: url("ISO_C++_Logo.svg.png");
+    background-size: cover;
+}
+#BoxC{
+    background-image: url("Java_programming_language_logo.svg.png");
+    background-size: cover;
+}   
+#BoxD{
+    background-image: url("Python-logo-notext.svg.png");
+    background-size: cover; 
+}
