@@ -95,18 +95,26 @@ a{
 #Box1{
     background-image: url("a.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 #Box2{
     background-image: url("b.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 #Box3{
     background-image: url("c.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }   
 #Box4{
-    background-image: url("b.jpg");
+    background-image: url("d.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .footer{
     text-align: center;
@@ -151,19 +159,57 @@ a{
 
 #BoxA{
     background-image: url("The_C_Programming_Language_logo.svg.png");
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     background-color: bisque;
     border: none;
 }
 #BoxB{
     background-image: url("ISO_C++_Logo.svg.png");
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: bisque;
+    border: none;
 }
 #BoxC{
     background-image: url("Java_programming_language_logo.svg.png");
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;    
+    background-color: bisque;
+    border: none;
 }   
 #BoxD{
     background-image: url("Python-logo-notext.svg.png");
-    background-size: cover; 
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: center;    
+    background-color: bisque;
+    border: none;
+}
+#BoxE{
+    background-image: url("HTML5_logo_and_wordmark.svg.png");
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: center;    
+    background-color: bisque;
+    border: none;
+}
+#BoxF{
+    background-image: url("Official_CSS_Logo.svg.png");
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: center;    
+    background-color: bisque;
+    border: none;
+}
+#BoxG{
+    background-image: url("javascript.png");
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: center;    
+    background-color: bisque;
+    border: none;
 }
