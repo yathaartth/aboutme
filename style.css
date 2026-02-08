@@ -5,19 +5,18 @@
 .navbar 
 {
   background-color: brown;
-  padding: 20px 30px;
-
+  padding: 10px 10px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 .nav-links
 {
   list-style: none; 
   display: flex;
-  gap: 150px;
-  margin-left: 5%;
+  text-align: center;
+  gap: 80px;
+  margin-left: 0px;
 }
 
 .nav-links a 
@@ -31,68 +30,110 @@ font-size: 20px;
 {
   text-decoration: underline;
 }
-  
 h1{
     color:brown;
-    text-decoration: brown wavy underline;
     font-family: 'Algerian';
     font-size: 80px;
     text-align: center;
     margin-top: 5px;
     margin-bottom: 5px;
 }
-.header{
-    color:brown;
+.logo{
+    color:bisque;
+    font-family: 'Brush Script MT' ;
+    font-weight: 100;
+    font-size: 40px;
     text-align: center;
-    font-size: 18px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 2px;
+    margin-left: 2px;
+    margin-bottom: 2px;
+    margin-right: 200px;
 }
+.marquee {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    color: brown;display: block;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    color: brown;
+}
+.marquee p {
+    margin: 0;
+    line-height: 1.2;
+    font-size: 20px;
+    padding: 0;
+    animation: moveText 12s linear infinite;
+}
+.marquee p::after {
+  content: "Computer Science Student | Curious about Technology | Finding Engineering in Life | Passionate about Problem Solving";
+  padding-left: 500px;
+}
+@keyframes moveText {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.marquee p:hover {
+  animation-play-state: paused;
+}   
 button{
     color:white;
     background-color:burlywood;
 }
 body{
-    background-color: bisque;
+  background-color: bisque;
+  min-height: 100vh;          /* full screen height */
+  display: flex;
+  flex-direction: column;
 }
+
 p{
     line-height: 20px;
 }
-#details{
-    font-size: 24px;
+.home-intro{
+    font-size: 20px;
+    margin: 10px;
 }
-div{
-    text-align: center;
-    height: 280px;
-    width: 280px;
-    background-color: burlywood;
-    border-width: 2px;
-    border-style: dotted;
-    border-color: brown;
-    border: 2px solid brown;
-    border-radius: 10px; /*For circle make square use radius as 50%*/
-    display: inline-block;
-    margin: 30px;
-    margin-right: 50px;
+.home-details{
+    font-size: 20px;
+    margin: 10px;
+    margin-left: 20px;
 }
-button{
-    margin-left: 25px;
-    padding: 15px 30px;
-    font-size: 18px;
-    border-radius: 8px;
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 15px 35px;
+  background-color: brown;
+  color: bisque;       
+  text-decoration: none; 
+
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 10px;
+  cursor: pointer;
+
+  margin-left: 25px;
 }
-button:hover{
-    background-color: brown;
-    transform: scale(1.1);
+
+.btn:hover {
+  background-color: brown;
+  transform: scale(1.1);
 }
+
 #details{
     padding: 10px;
 }
-a{
-    margin-left: 25px;
-    font-size: 20px;
-}
-#Box1{
+
+/*#Box1{
     background-image: url("a.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -115,15 +156,16 @@ a{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-}
+}*/
 .footer{
     text-align: center;
-    font-size: 18px;
-    font-family: 'Times New Roman';
-    color: bisque;
-    background-color: brown;
-    padding: 10px;
-    margin-top: 20px;
+  font-size: 18px;
+  font-family: 'Times New Roman';
+  color: bisque;
+  background-color: brown;
+  padding: 10px;
+
+  margin-top: auto;  
 }
 #cprt{ 
     font-size: 20px;
