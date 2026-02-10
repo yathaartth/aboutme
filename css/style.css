@@ -188,7 +188,7 @@ p{
     margin-right: 50px;
 }
 #BoxA{
-    background-image: url("The_C_Programming_Language_logo.svg.png");
+    background-image: url("../images/c.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -196,7 +196,7 @@ p{
     border: none;
 }
 #BoxB{
-    background-image: url("ISO_C++_Logo.svg.png");
+    background-image: url("../images/cpp.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -204,7 +204,7 @@ p{
     border: none;
 }
 #BoxC{
-    background-image: url("Java_programming_language_logo.svg.png");
+    background-image: url("../images/java.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;    
@@ -212,7 +212,7 @@ p{
     border: none;
 }   
 #BoxD{
-    background-image: url("Python-logo-notext.svg.png");
+    background-image: url("../images/py.png");
     background-size: contain; 
     background-repeat: no-repeat;
     background-position: center;    
@@ -220,7 +220,7 @@ p{
     border: none;
 }
 #BoxE{
-    background-image: url("HTML5_logo_and_wordmark.svg.png");
+    background-image: url("../images/html.png");
     background-size: contain; 
     background-repeat: no-repeat;
     background-position: center;    
@@ -228,7 +228,7 @@ p{
     border: none;
 }
 #BoxF{
-    background-image: url("Official_CSS_Logo.svg.png");
+    background-image: url("../images/css.png");
     background-size: contain; 
     background-repeat: no-repeat;
     background-position: center;    
@@ -236,7 +236,7 @@ p{
     border: none;
 }
 #BoxG{
-    background-image: url("javascript.png");
+    background-image: url("../images/jss.png");
     background-size: contain; 
     background-repeat: no-repeat;
     background-position: center;    

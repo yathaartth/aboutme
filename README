@@ -1,4 +1,37 @@
-# Phase 1 (18.01.26 - 10.01.26)**
+# PERSONAL PORTFOLIO WEBSITE
+
+This is my personal portfolio website built using HTML and CSS to showcase my profile, skills, education, and projects.
+
+# Features
+- Home page with introduction
+- About Me section
+- Education details
+- Skills overview
+- Projects showcase
+- Contact information
+
+## Technologies Used
+- HTML5
+- CSS3
+- JavaScript (basic)
+- GitHub Pages
+
+## Features
+- Home page with introduction
+- About Me section
+- Education details
+- Skills overview
+- Projects showcase
+- Contact information
+
+## What I Learned
+- Structuring multi-page websites
+- Using CSS Flexbox for layouts
+- Reusing a single CSS file across pages
+- Hosting a static website using GitHub Pages
+
+## Below is the timeline for the project:
+# Phase 1 (18.01.26 - 10.01.26)
 Single personal webpage creation with use of HTML and CSS.
 Practicing with github.
 Exploring various new attributes.
@@ -10,10 +43,7 @@ Modified the home page in a more formal way and revamped some more tweaks done.
 Added the first moving animation of this website.
 More webpages added. 
 Minor animation and more graphically advanced and appealing structures integerated.
-
-## PHASE 1, SUCCESSFULLY COMPLETED.
-
-===========================================================================================
+***************************PHASE 1, SUCCESSFULLY COMPLETED*********************************
 
 # Phase 2 (After successful accomplishment of basic frame of the website):
 Related to various parts of me
@@ -23,8 +53,6 @@ Dark mode toggle
 Animations
 Form validation
 
-===========================================================================================
-
 # Phase 3 (Later semesters):
 Convert to:
 Full portfolio website
@@ -32,12 +60,13 @@ Backend (Node / Flask)
 Database
 Login system
 
-
 ===========================================================================================
 ===========================================================================================
 
-## Same project. Continuous evolution...
+# Same project. Continuous evolution...
 
+## Author
+Yatharth Mishra
 
 
 
