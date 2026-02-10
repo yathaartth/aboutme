@@ -54,10 +54,6 @@ h1{
     width: 100%;
     overflow: hidden;
     white-space: nowrap;
-    color: brown;display: block;
-    width: 100%;
-    overflow: hidden;
-    white-space: nowrap;
     color: brown;
 }
 .marquee p {
@@ -68,7 +64,7 @@ h1{
     animation: moveText 12s linear infinite;
 }
 .marquee p::after {
-  content: "Computer Science Student | Curious about Technology | Finding Engineering in Life | Passionate about Problem Solving";
+  content: "This portfolio is under continuous development. More updates coming soon....";
   padding-left: 500px;
 }
 @keyframes moveText {
@@ -86,13 +82,15 @@ button{
     color:white;
     background-color:burlywood;
 }
-body{
-  background-color: bisque;
-  min-height: 100vh;          /* full screen height */
+html, body {
+  height: 100%;
+}
+body {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: bisque;
 }
-
 p{
     line-height: 20px;
 }
@@ -103,7 +101,11 @@ p{
 .home-details{
     font-size: 20px;
     margin: 10px;
-    margin-left: 20px;
+    margin-left: 10px;
+}
+.home-intro ul {
+  list-style: circle;
+  padding-left: 20px;
 }
 
 .btn {
@@ -132,33 +134,9 @@ p{
 #details{
     padding: 10px;
 }
-
-/*#Box1{
-    background-image: url("a.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-#Box2{
-    background-image: url("b.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-#Box3{
-    background-image: url("c.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}   
-#Box4{
-    background-image: url("d.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}*/
 .footer{
-    text-align: center;
+  margin-top: auto;
+  text-align: center;
   font-size: 18px;
   font-family: 'Times New Roman';
   color: bisque;
@@ -177,16 +155,13 @@ p{
     font-size: 24px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
 .skills-heading {
-  font-family: 'Comic Sans MS';
-  font-size: 72px;
+  font-family: 'Times New Roman';
+  font-size: 36px;
   text-decoration: none
 }
 
 .skills-page {
-  margin-left: 10px;
-  margin-left: 10px;
   text-align: center;
 }
 
@@ -198,7 +173,20 @@ p{
 .skills-container:hover {
   color: burlywood;
 }
-
+.prgm{
+    text-align: center;
+    height: 175px;
+    width: 175px;
+    background-color: burlywood;
+    border-width: 2px;
+    border-style: dotted;
+    border-color: brown;
+    border: 2px solid brown;
+    border-radius: 10px; /*For circle make square use radius as 50%*/
+    display: inline-block;
+    margin: 30px;
+    margin-right: 50px;
+}
 #BoxA{
     background-image: url("The_C_Programming_Language_logo.svg.png");
     background-size: contain;
@@ -254,4 +242,22 @@ p{
     background-position: center;    
     background-color: bisque;
     border: none;
+}
+.about-section{
+    font-size: 20px;
+}
+.quote{
+  font-style: italic;
+}
+.contact-section{
+    font-size: 20px;
+}
+.project-details{
+    font-size: 20px;
+}
+.projects-section{
+    font-size: 20px;
+}
+.education-section{
+    font-size: 20px;
 }
