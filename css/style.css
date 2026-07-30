@@ -62,20 +62,35 @@ body{
     justify-content:center;
     align-items:center;
 
+    overflow:hidden;
+
+    flex-shrink:0;
+
     border-radius:50%;
+
     border:2px solid var(--accent);
 
-    color:white;
-    font-weight:700;
-    font-size:1.15rem;
+    background:var(--card);
 
-    transition:0.3s ease;
+    transition:.3s ease;
 }
 
 .logo:hover{
-    background:var(--accent);
-    color:black;
-    transform:rotate(5deg);
+
+    transform:scale(1.08);
+
+    box-shadow:0 0 15px rgba(56,189,248,.4);
+}
+
+.logo img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
 }
 
 .tagline{
@@ -213,57 +228,280 @@ h3{
     margin-bottom:10px;
 }
 
-/* =====================
-   HOME PAGE
-===================== */
+/* ===================================================
+                    HOME PAGE
+=================================================== */
 
-.home-intro,
-.home-details{
+.home-page{
+    width:100%;
+}
+
+/* ---------- HERO ---------- */
+
+.home-page .hero{
     width:90%;
-    max-width:1000px;
+    max-width:1200px;
+    margin:70px auto;
 
-    margin:30px auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:70px;
+}
 
-    padding:35px;
+.home-page .hero-text{
+    flex:1;
+}
+
+.home-page .hero-greeting{
+    color:var(--accent);
+    font-size:1.15rem;
+    font-weight:600;
+    letter-spacing:1px;
+    margin-bottom:15px;
+}
+
+.home-page .hero-text h1{
+    text-align:left;
+    margin:0;
+    font-size:4rem;
+    line-height:1.1;
+}
+
+.home-page .hero-text h1::after{
+    margin:15px 0;
+}
+
+.home-page .hero-text h2{
+    text-align:left;
+    margin:0 0 25px;
+    color:var(--secondary);
+    font-size:1.45rem;
+}
+
+.home-page .hero-description{
+    max-width:650px;
+    line-height:1.9;
+    font-size:1.08rem;
+}
+
+.home-page .hero-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+    margin-top:35px;
+}
+
+.home-page .hero-tags span{
+    background:var(--card);
+    padding:12px 18px;
+    border-radius:30px;
+    border:1px solid rgba(255,255,255,.08);
+    transition:.3s;
+}
+
+.home-page .hero-tags span:hover{
+    background:var(--accent);
+    color:#000;
+    transform:translateY(-4px);
+}
+
+/* ---------- PROFILE ---------- */
+
+.home-page .hero-image{
+    display:flex;
+    justify-content:center;
+}
+
+.home-page .profile-circle{
+
+    width:280px;
+    height:280px;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
     background:var(--card);
 
+    border:5px solid var(--accent);
+
+    color:var(--accent);
+
+    font-size:5rem;
+    font-weight:bold;
+
+    box-shadow:0 0 30px rgba(56,189,248,.25);
+
+    transition:.3s;
+}
+
+.home-page .profile-circle:hover{
+
+    transform:scale(1.05);
+}
+
+.home-page .profile-circle img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    border-radius:50%;
+}
+
+/* ---------- INTRO ---------- */
+
+.home-page .home-overview{
+
+    width:90%;
+    max-width:1000px;
+
+    margin:70px auto;
+
+    background:var(--card);
+
+    padding:45px;
+
     border-radius:20px;
 
-    line-height:1.9;
-
-    box-shadow:0 10px 30px rgba(0,0,0,0.25);
-}
-
-.home-intro ul{
-    margin-top:10px;
-    margin-left:25px;
-}
-
-.home-cta{
     text-align:center;
-    margin:40px;
+
+    line-height:1.9;
 }
 
-.btn{
-    display:inline-block;
+.home-page .home-overview h2{
 
-    padding:15px 35px;
+    color:var(--accent);
 
-    background:var(--accent);
-    color:black;
-
-    text-decoration:none;
-    font-weight:600;
-
-    border-radius:12px;
-
-    transition:0.3s;
+    margin-bottom:20px;
 }
 
-.btn:hover{
-    transform:translateY(-5px);
+.home-page .home-overview p{
+
+    font-size:1.05rem;
 }
+
+/* ---------- CARDS ---------- */
+
+.home-page .quick-links{
+
+    width:90%;
+    max-width:1150px;
+
+    margin:70px auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+}
+
+.home-page .quick-card{
+
+    background:var(--card);
+
+    padding:35px;
+
+    border-radius:20px;
+
+    border-top:4px solid var(--accent);
+
+    transition:.35s;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.25);
+}
+
+.home-page .quick-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 15px 30px rgba(56,189,248,.18);
+}
+
+.home-page .quick-card h3{
+
+    color:var(--accent);
+
+    margin-bottom:18px;
+
+    font-size:1.45rem;
+}
+
+.home-page .quick-card p{
+
+    line-height:1.8;
+}
+
+/* ---------- QUOTE ---------- */
+
+.home-page .home-quote{
+
+    width:90%;
+    max-width:900px;
+
+    margin:80px auto;
+
+    text-align:center;
+}
+
+.home-page .home-quote blockquote{
+
+    font-size:1.45rem;
+
+    font-style:italic;
+
+    color:var(--secondary);
+
+    line-height:1.8;
+}
+
+/* ---------- MOBILE ---------- */
+
+@media(max-width:900px){
+
+.home-page .hero{
+
+    flex-direction:column-reverse;
+
+    text-align:center;
+}
+
+.home-page .hero-text h1,
+.home-page .hero-text h2{
+
+    text-align:center;
+}
+
+.home-page .hero-text h1::after{
+
+    margin:15px auto;
+}
+
+.home-page .hero-description{
+
+    margin:auto;
+}
+
+.home-page .hero-tags{
+
+    justify-content:center;
+}
+
+.home-page .profile-circle{
+
+    width:220px;
+    height:220px;
+
+    font-size:4rem;
+}
+
+}
+
 
 /* =====================
    COMMON SECTIONS
@@ -303,75 +541,375 @@ h3{
 /* =====================
    EDUCATION
 ===================== */
+/* =====================
+   EDUCATION TIMELINE
+===================== */
 
-.education-item{
-    border-left:4px solid var(--accent);
-    padding-left:25px;
-    text-align:left;
+.timeline{
+    position:relative;
+    margin-top:20px;
+}
+
+.timeline::before{
+    content:"";
+    position:absolute;
+    left:120px;
+    top:0;
+    bottom:0;
+
+    width:4px;
+
+    background:var(--accent);
+
+    border-radius:10px;
+}
+
+.timeline-item{
+    display:grid;
+    grid-template-columns:90px 60px 1fr;
+
+    align-items:flex-start;
+
+    margin-bottom:60px;
+
+    position:relative;
+}
+
+.timeline-year{
+    font-size:1.2rem;
+    font-weight:700;
+
+    color:var(--text);
+
+    text-align:right;
+
+    padding-top:10px;
+}
+
+.timeline-dot{
+
+    width:22px;
+    height:22px;
+
+    background:var(--accent);
+
+    border-radius:50%;
+
+    border:5px solid var(--bg);
+
+    justify-self:center;
+
+    margin-top:8px;
+
+    z-index:2;
+
+    box-shadow:0 0 15px rgba(56,189,248,.6);
+}
+
+.timeline-content{
+
+    background:#111827;
+
+    padding:25px;
+
+    border-radius:18px;
+
+    border-left:5px solid var(--accent);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.3);
+
+    transition:.3s ease;
+}
+
+.timeline-content:hover{
+
+    transform:translateX(10px);
+
+    box-shadow:0 15px 35px rgba(56,189,248,.2);
+}
+
+.timeline-content h3{
+
+    margin-bottom:15px;
+
+    color:var(--accent);
+}
+
+.timeline-content p{
+
+    margin-bottom:10px;
+
+    color:var(--text);
+
+    line-height:1.7;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.timeline::before{
+
+left:35px;
+
+}
+
+.timeline-item{
+
+grid-template-columns:40px 30px 1fr;
+
+gap:15px;
+
+}
+
+.timeline-year{
+
+font-size:.95rem;
+
+text-align:left;
+
+padding-top:6px;
+
+}
+
+.timeline-dot{
+
+width:18px;
+
+height:18px;
+
+border:4px solid var(--bg);
+
+}
+
+.timeline-content{
+
+padding:18px;
+
+}
+
 }
 
 /* =====================
    SKILLS
 ===================== */
+/*=========================
+        SKILLS
+==========================*/
 
-.skills-page{
+.skills-subtitle{
+
     text-align:center;
+
+    color:var(--secondary);
+
+    margin-top:-20px;
+
+    margin-bottom:60px;
+
+    font-size:1.1rem;
 }
 
-.prgm{
-    width:180px;
-    height:180px;
+.floating-skills{
 
-    display:inline-block;
+    width:90%;
 
-    margin:25px;
+    max-width:1200px;
 
-    border-radius:20px;
+    margin:auto;
 
-    background:white;
+    display:flex;
 
-    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+    flex-wrap:wrap;
 
-    transition:0.3s ease;
+    justify-content:center;
+
+    gap:35px;
+
+    padding-bottom:70px;
 }
 
-.prgm:hover{
-    transform:translateY(-10px) scale(1.05);
+.skill-card{
+
+    background:rgba(30,41,59,.95);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:22px;
+
+    text-align:center;
+
+    padding:30px;
+
+    transition:.35s;
+
+    backdrop-filter:blur(12px);
+
+    box-shadow:0 12px 30px rgba(0,0,0,.25);
+
+    position:relative;
 }
 
-#BoxA{
-    background:url("../images/c.png") center/contain no-repeat;
-    background-color:white;
+.skill-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 20px 40px rgba(56,189,248,.25);
+
+    border-color:var(--accent);
 }
 
-#BoxB{
-    background:url("../images/cpp.png") center/contain no-repeat;
-    background-color:white;
+.skill-card.large{
+
+    width:290px;
+
+    transform:translateY(-15px);
 }
 
-#BoxC{
-    background:url("../images/java.png") center/contain no-repeat;
-    background-color:white;
+.skill-card.medium{
+
+    width:250px;
 }
 
-#BoxD{
-    background:url("../images/py.png") center/contain no-repeat;
-    background-color:white;
+.skill-card.small{
+
+    width:220px;
+
+    transform:translateY(18px);
 }
 
-#BoxE{
-    background:url("../images/html.png") center/contain no-repeat;
-    background-color:white;
+.skill-card img{
+
+    width:80px;
+
+    height:80px;
+
+    object-fit:contain;
+
+    margin-bottom:20px;
+
+    transition:.35s;
 }
 
-#BoxF{
-    background:url("../images/css.png") center/contain no-repeat;
-    background-color:white;
+.skill-card:hover img{
+
+    transform:scale(1.12) rotate(4deg);
 }
 
-#BoxG{
-    background:url("../images/jss.png") center/contain no-repeat;
-    background-color:white;
+.skill-card h2{
+
+    color:white;
+
+    margin-bottom:15px;
+
+    font-size:1.6rem;
+}
+
+.skill-card p{
+
+    color:var(--secondary);
+
+    line-height:1.7;
+
+    min-height:70px;
+
+    margin-bottom:20px;
+}
+
+.skill-card span{
+
+    color:#ffd54f;
+
+    font-size:1.1rem;
+
+    letter-spacing:3px;
+
+    font-weight:600;
+}
+
+/*=========================
+     CURRENTLY LEARNING
+==========================*/
+
+.learning-box{
+
+    width:85%;
+
+    max-width:900px;
+
+    margin:30px auto 80px;
+
+    text-align:center;
+
+    background:var(--card);
+
+    border-radius:22px;
+
+    padding:40px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+
+.learning-box h2{
+
+    color:var(--accent);
+
+    margin-bottom:30px;
+}
+
+.learning-tags{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:18px;
+}
+
+.learning-tags span{
+
+    background:#0f172a;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    padding:12px 22px;
+
+    border-radius:30px;
+
+    transition:.3s;
+}
+
+.learning-tags span:hover{
+
+    background:var(--accent);
+
+    color:black;
+
+    transform:translateY(-4px);
+}
+
+/*=========================
+      RESPONSIVE
+==========================*/
+
+@media(max-width:768px){
+
+.skill-card.large,
+
+.skill-card.medium,
+
+.skill-card.small{
+
+    width:100%;
+
+    transform:none;
+}
+
+.floating-skills{
+
+    gap:25px;
 }
 
 /* =====================
@@ -418,7 +956,77 @@ h3{
 /* =====================
    CONTACT
 ===================== */
+.social-links{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+    margin:40px 0;
+}
 
+.social-card{
+    width:220px;
+    height:170px;
+
+    background:var(--card);
+
+    border:2px solid rgba(56,189,248,0.25);
+
+    border-radius:18px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-decoration:none;
+
+    color:var(--text);
+
+    box-shadow:0 8px 20px rgba(0,0,0,0.25);
+
+    transition:all .3s ease;
+}
+
+.social-card i{
+    font-size:2.8rem;
+    color:var(--accent);
+    margin-bottom:15px;
+}
+
+.social-card h3{
+    margin:0;
+    font-size:1.25rem;
+}
+
+.social-card span{
+    margin-top:8px;
+    font-size:.9rem;
+    color:#94a3b8;
+}
+
+.social-card:hover{
+    transform:translateY(-8px);
+    border-color:var(--accent);
+    box-shadow:0 12px 30px rgba(56,189,248,.3);
+}
+
+.social-card:hover i,
+.social-card:hover h3{
+    color:var(--accent);
+}
+
+@media(max-width:768px){
+    .social-links{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .social-card{
+        width:90%;
+        max-width:320px;
+    }
+}
 .contact-list{
     list-style:none;
     line-height:2.3;
