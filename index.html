@@ -1,22 +1,35 @@
 <!DOCTYPE html>
- <head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me~ Yatharth Mishra</title>
+    <title>Yatharth Mishra | Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
 </head>
 <body>
+
 <div class="marquee">
-  <p>This portfolio is under continuous development. More updates coming soon....</p>
+  <div class="marquee-content">
+    <span class="pulse-dot"></span>
+    <span>Portfolio under continuous development &bull; Building modern software solutions</span>
+  </div>
 </div>
 
 <nav class="navbar">
-
-  <div class="brand">
+  <a href="index.html" class="brand">
     <div class="logo">
       <img src="images/logo.png" alt="Yatharth Mishra Logo">
     </div>
     <span class="tagline">Yatharth Mishra</span>
-  </div>
+  </a>
+
+  <button class="nav-toggle" aria-label="Toggle navigation menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
@@ -26,149 +39,101 @@
     <li><a href="projects.html">Projects</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
-
 </nav>  
 
 <main class="home-page">
-<section class="hero">
-
+    <section class="hero reveal">
         <div class="hero-text">
-
-            <p class="hero-greeting">Crafting Ideas Into Code</p>
-
             <h1>Yatharth Mishra</h1>
 
-            <h2>Computer Science Undergraduate</h2>
+            <h2 class="hero-typing">
+                <span id="typing-text">Computer Science Undergraduate</span><span class="typing-cursor">&nbsp;</span>
+            </h2>
 
             <p class="hero-description">
-
-                Passionate about building practical software, solving
-                challenging problems and exploring modern technologies.
-                I believe the best way to learn is through curiosity,
-                consistency and creating projects that have real-world value.
-
+                Passionate about building practical software, solving challenging problems, and exploring modern technologies.
+                I believe the best way to learn is through curiosity, consistency, and creating projects with real-world value.
             </p>
 
             <div class="hero-tags">
-
-                <span>💻 Web Development</span>
-                <span>☕ Java</span>
-                <span>🐍 Python</span>
-                <span>⚡ C / C++</span>
-                <span>🧩 Problem Solving</span>
-
+                <span>💻 Developer</span>
+                <span>🎓 Student</span>
+                <span>🏸 Badminton Player</span>
+                <span>🪈 Flautist</span>
             </div>
-
         </div>
 
         <div class="hero-image">
-
-            <!-- Replace with your image later -->
-
-            <div class="profile-circle">
-
-                <img src="images/logo.png" alt="Yatharth Mishra Logo">
-
+            <div class="profile-water-container">
+                <div class="profile-water-image">
+                    <img src="images/logo.png" alt="Yatharth Mishra Logo">
+                </div>
+                <div class="water-ripple-rings">
+                    <span class="ring-1"></span>
+                    <span class="ring-2"></span>
+                    <span class="ring-3"></span>
+                    <span class="ring-4"></span>
+                    <span class="ring-5"></span>
+                    <span class="ring-6"></span>
+                </div>
             </div>
-
         </div>
-
     </section>
 
-    <!-- Intro -->
-
-    <section class="home-overview">
-
+    <!-- Intro Overview -->
+    <section class="home-overview reveal delay-1">
         <h2>Turning Curiosity Into Code</h2>
-
         <p>
-
             Every project starts with curiosity.
-
-            This portfolio showcases my journey as a Computer Science
-            undergraduate who enjoys learning new technologies,
-            experimenting with ideas and continuously improving through
-            hands-on experience.
-
-            As I learn, build and grow, this portfolio grows alongside me.
-
+            This portfolio showcases my journey as a Computer Science undergraduate who enjoys learning new technologies,
+            experimenting with ideas, and continuously improving through hands-on experience.
+            As I learn, build, and grow, this portfolio evolves alongside me.
         </p>
-
     </section>
 
-    <!-- Philosophy -->
-
+    <!-- Philosophy Quick Links -->
     <section class="quick-links">
-
-        <div class="quick-card">
-
-            <h3>🏗️ Building</h3>
-
+        <div class="quick-card reveal delay-1">
+            <h3><i class="fas fa-cubes"></i> Building</h3>
             <p>
-
                 I enjoy transforming ideas into practical projects.
-                Whether it's developing responsive websites,
-                experimenting with programming concepts or solving
-                real-world problems, building helps me strengthen both
-                my technical and creative thinking.
-
+                Whether it's developing responsive websites, experimenting with programming concepts, or solving
+                real-world problems, building helps me strengthen both my technical and creative thinking.
             </p>
-
         </div>
 
-        <div class="quick-card">
-
-            <h3>📚 Learning</h3>
-
+        <div class="quick-card reveal delay-2">
+            <h3><i class="fas fa-book-open"></i> Learning</h3>
             <p>
-
                 Technology evolves every day, and so do I.
                 Alongside my B.Tech in Computer Science Engineering,
-                I continuously learn Java, Python, C, C++, web
-                development and modern software technologies through
-                courses, projects and self-learning.
-
+                I continuously learn Java, Python, C, C++, web development, and modern software tools through courses and self-learning.
             </p>
-
         </div>
 
-        <div class="quick-card">
-
-            <h3>🌱 Growing</h3>
-
+        <div class="quick-card reveal delay-3">
+            <h3><i class="fas fa-seedling"></i> Growing</h3>
             <p>
-
                 Growth comes from consistency.
-                Every challenge teaches something new,
-                every project improves my confidence and
-                every experience brings me one step closer to
-                becoming a better software engineer.
-
+                Every challenge teaches something new, every project improves my confidence, and every experience brings me one step closer to becoming a well-rounded software engineer.
             </p>
-
         </div>
-
     </section>
 
     <!-- Quote -->
-
-    <section class="home-quote">
-
-        <blockquote>
-
-            "Driven by curiosity, strengthened through learning,
-            and inspired by building."
-
+    <section class="home-quote reveal">
+        <blockquote class="quote">
+            "Driven by curiosity, strengthened through learning, and inspired by building."
         </blockquote>
-
     </section>
 </main>
 
 <footer class="footer">
-<p id="cprt"><b>Copyright © 2026 Yatharth Mishra.<br>All rights reserved.</b></p><br>
-<p>All content on this website, including text, graphics, and design, is the intellectual property of Yatharth Mishra<br> unless otherwise stated. Unauthorized use, reproduction, or distribution is prohibited.</p>
-<br><p id="fts">Privacy Policy | Terms of Use | Legal | Site Map</p>
-<br><p id="ind">भारत</p>
+    <p id="cprt"><b>Copyright © 2026 Yatharth Mishra. All rights reserved.</b></p>
+    <p>All content on this website, including text, graphics, and design, is the intellectual property of Yatharth Mishra unless otherwise stated.</p>
+    <p id="fts">Privacy Policy | Terms of Use | Legal | Site Map</p>
+    <p id="ind">भारत</p>
 </footer>
+
 </body>
 </html>
