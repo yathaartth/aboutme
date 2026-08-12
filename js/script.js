@@ -27,24 +27,34 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinksContainer = document.querySelector('.nav-links');
 
     if (navToggle && navLinksContainer) {
-        navToggle.addEventListener('click', () => {
+        navToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
             navLinksContainer.classList.toggle('active');
             navToggle.classList.toggle('active');
         });
 
+        // Close menu on clicking link
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
                 navLinksContainer.classList.remove('active');
                 navToggle.classList.remove('active');
             });
         });
+
+        // Close menu on clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navLinksContainer.contains(e.target) && !navToggle.contains(e.target)) {
+                navLinksContainer.classList.remove('active');
+                navToggle.classList.remove('active');
+            }
+        });
     }
 
     // 4. Apple-style Scroll Reveal Animation (IntersectionObserver)
     const observerOptions = {
         root: null,
-        rootMargin: '0px 0px -50px 0px',
-        threshold: 0.12
+        rootMargin: '0px 0px -40px 0px',
+        threshold: 0.08
     };
 
     const revealObserver = new IntersectionObserver((entries, observer) => {
@@ -59,30 +69,32 @@ document.addEventListener('DOMContentLoaded', () => {
     const revealElements = document.querySelectorAll('.reveal');
     revealElements.forEach(el => revealObserver.observe(el));
 
-    // 5. Spotlight Pointer Glow Effect & 3D Tilt on Glass Cards
+    // 5. Spotlight Pointer Glow Effect & 3D Tilt on Glass Cards (Desktop only)
     const spotlightCards = document.querySelectorAll('.quick-card, .skill-card, .project-card, .social-card, .about-section, .learning-box, .contact-form-card, .timeline-content');
     
-    spotlightCards.forEach(card => {
-        card.addEventListener('mousemove', (e) => {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            
-            card.style.setProperty('--mouse-x', `${x}px`);
-            card.style.setProperty('--mouse-y', `${y}px`);
+    if (window.innerWidth > 900) {
+        spotlightCards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
 
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
-            const rotateX = ((y - centerY) / centerY) * -5;
-            const rotateY = ((x - centerX) / centerX) * 5;
-            
-            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-6px)`;
-        });
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = ((y - centerY) / centerY) * -4;
+                const rotateY = ((x - centerX) / centerX) * 4;
+                
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+            });
 
-        card.addEventListener('mouseleave', () => {
-            card.style.transform = '';
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = '';
+            });
         });
-    });
+    }
 
     // 6. Typewriter Effect in Hero Section
     const typingElement = document.getElementById('typing-text');
@@ -205,14 +217,4 @@ document.addEventListener('DOMContentLoaded', () => {
             behavior: 'smooth'
         });
     });
-
-    // 9. Water Parallax Effect on Hero Image
-    const waterContainer = document.querySelector('.profile-water-container');
-    if (waterContainer) {
-        document.addEventListener('mousemove', (e) => {
-            const x = (e.clientX - window.innerWidth / 2) * 0.012;
-            const y = (e.clientY - window.innerHeight / 2) * 0.012;
-            waterContainer.style.transform = `translate(${x}px, ${y}px)`;
-        });
-    }
 });

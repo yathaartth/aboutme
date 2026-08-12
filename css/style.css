@@ -29,7 +29,10 @@
     font-family: var(--font-main);
 }
 
-html {
+html, body {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
     scroll-behavior: smooth;
     color-scheme: dark;
 }
@@ -40,7 +43,6 @@ body {
     flex-direction: column;
     background-color: var(--bg-dark);
     color: var(--text-primary);
-    overflow-x: hidden;
     position: relative;
 }
 
@@ -113,7 +115,7 @@ body::after {
     backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.06);
     color: var(--text-secondary);
-    padding: 8px 0;
+    padding: 8px 12px;
     overflow: hidden;
     font-size: 0.85rem;
     font-weight: 500;
@@ -127,6 +129,7 @@ body::after {
     align-items: center;
     justify-content: center;
     gap: 12px;
+    text-align: center;
 }
 
 .pulse-dot {
@@ -136,6 +139,7 @@ body::after {
     border-radius: 50%;
     box-shadow: 0 0 12px var(--accent-cyan);
     animation: applePulse 2s infinite;
+    flex-shrink: 0;
 }
 
 @keyframes applePulse {
@@ -188,6 +192,7 @@ body::after {
     align-items: center;
     gap: 14px;
     text-decoration: none;
+    flex-shrink: 0;
 }
 
 /* Premium Top-Left Glass Logo Frame & Light Shimmer Sweep */
@@ -202,6 +207,7 @@ body::after {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     overflow: hidden;
+    flex-shrink: 0;
 }
 
 .logo::before {
@@ -229,6 +235,8 @@ body::after {
 .logo img {
     width: 100%;
     height: 100%;
+    max-width: 100%;
+    max-height: 100%;
     object-fit: cover;
     border-radius: 11px;
     background: #090e1a;
@@ -248,6 +256,7 @@ body::after {
     background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    white-space: nowrap;
 }
 
 .nav-links {
@@ -266,6 +275,7 @@ body::after {
     border-radius: 20px;
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     position: relative;
+    white-space: nowrap;
 }
 
 .nav-links a:hover {
@@ -309,11 +319,12 @@ body::after {
 h1,
 .skills-heading {
     text-align: center;
-    font-size: 3rem;
+    font-size: clamp(2.2rem, 5vw, 3rem);
     font-weight: 800;
     letter-spacing: -1.2px;
     color: var(--text-primary);
     margin-top: 45px;
+    padding: 0 15px;
 }
 
 .apple-shimmer-text,
@@ -352,9 +363,10 @@ h2 {
     max-width: 750px;
     margin: 10px auto 45px auto;
     color: var(--text-secondary);
-    font-size: 1.15rem;
+    font-size: clamp(1rem, 2.5vw, 1.15rem);
     font-weight: 400;
     line-height: 1.7;
+    padding: 0 15px;
 }
 
 /* ===================================================
@@ -473,21 +485,26 @@ h2 {
 .home-page .hero-text h1 {
     text-align: left;
     margin: 0;
-    font-size: 4.2rem;
+    font-size: clamp(2.5rem, 6vw, 4.2rem);
     line-height: 1.08;
     letter-spacing: -2px;
+    padding: 0;
+    /* Suppress global h1 margin-top on hero */
+    margin-top: 0;
 }
 
+/* Suppress the decorative underline bar specifically in hero */
 .home-page .hero-text h1::after {
-    margin: 20px 0;
+    display: none;
 }
 
 .home-page .hero-text h2 {
     text-align: left;
     margin: 0 0 24px 0;
     color: var(--accent-blue);
-    font-size: 1.4rem;
+    font-size: clamp(1.1rem, 3vw, 1.4rem);
     font-weight: 600;
+    padding: 0;
 }
 
 .typing-cursor {
@@ -513,7 +530,7 @@ h2 {
 .home-page .hero-description {
     max-width: 630px;
     line-height: 1.85;
-    font-size: 1.08rem;
+    font-size: clamp(0.98rem, 2vw, 1.08rem);
     color: var(--text-secondary);
 }
 
@@ -550,64 +567,170 @@ h2 {
     justify-content: center;
     align-items: center;
     position: relative;
+    flex-shrink: 0;
+    max-width: 100%;
+    /* Give right-side breathing room for the drift animation */
+    padding-right: 28px;
 }
 
+/* ===================================================
+   ELEGANT GLASSMORPHISM HERO LOGO FRAME
+=================================================== */
+
 .home-page .profile-water-container {
-    width: 330px;
-    height: 330px;
+    width: 300px;
+    height: 340px;
+    max-width: 80vw;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Significant, Pronounced Fluid Drift Animation */
     animation: significantFluidWaterFloat 7.5s cubic-bezier(0.37, 0, 0.63, 1) infinite alternate;
 }
 
 @keyframes significantFluidWaterFloat {
     0% {
-        transform: translateX(-48px) translateY(-6px) rotate(-4deg);
+        transform: translateX(-24px) translateY(-5px) rotate(-3deg);
     }
-
     33% {
-        transform: translateX(-15px) translateY(6px) rotate(1.5deg);
+        transform: translateX(-8px) translateY(5px) rotate(1deg);
     }
-
     66% {
-        transform: translateX(22px) translateY(-5px) rotate(4deg);
+        transform: translateX(12px) translateY(-4px) rotate(3deg);
     }
-
     100% {
-        transform: translateX(48px) translateY(5px) rotate(-3deg);
+        transform: translateX(24px) translateY(4px) rotate(-2.5deg);
     }
 }
 
-/* Water Image Container with Soft Vignette Edge Mask (No Enlarging) */
-.home-page .profile-water-image {
-    width: 285px;
-    height: 285px;
-    position: relative;
-    z-index: 3;
-    overflow: hidden;
-    -webkit-mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 1) 42%, rgba(0, 0, 0, 0.85) 65%, rgba(0, 0, 0, 0) 95%);
-    mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 1) 42%, rgba(0, 0, 0, 0.85) 65%, rgba(0, 0, 0, 0) 95%);
+
+/* Rotating gradient border ring (pseudo-element trick) */
+.home-page .logo-border-ring {
+    position: absolute;
+    inset: -3px;
+    border-radius: 28px;
+    background: conic-gradient(
+        from var(--angle, 0deg),
+        #38bdf8 0%,
+        #818cf8 25%,
+        #060911 50%,
+        #818cf8 75%,
+        #38bdf8 100%
+    );
+    animation: rotateBorder 4s linear infinite;
+    z-index: 0;
+    filter: blur(1px);
 }
 
-.home-page .profile-water-image img {
+@property --angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes rotateBorder {
+    to { --angle: 360deg; }
+}
+
+/* Fallback for browsers that don't support @property */
+@supports not (background: conic-gradient(from 0deg, red, blue)) {
+    .home-page .logo-border-ring {
+        border: 2px solid rgba(56, 189, 248, 0.6);
+        background: none;
+        filter: none;
+    }
+}
+
+/* Main glassmorphism card */
+.home-page .logo-glass-card {
+    position: relative;
+    z-index: 2;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    display: block;
-    transform: scale(1);
-    transition: none;
+    border-radius: 26px;
+    background: rgba(10, 18, 35, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(56, 189, 248, 0.15);
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.5),
+        0 0 0 1px rgba(255, 255, 255, 0.04) inset,
+        0 0 60px rgba(56, 189, 248, 0.12),
+        0 0 120px rgba(129, 140, 248, 0.07);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: cardGlowPulse 4s ease-in-out infinite alternate;
 }
 
-/* Multi-Layered Concentric Water Ripples Expanding Underneath (Appears only on Hover at Slow Speed) */
+@keyframes cardGlowPulse {
+    0%  { box-shadow: 0 8px 32px rgba(0,0,0,0.5), 0 0 50px rgba(56,189,248,0.1), 0 0 100px rgba(129,140,248,0.06); }
+    100% { box-shadow: 0 8px 32px rgba(0,0,0,0.5), 0 0 80px rgba(56,189,248,0.22), 0 0 150px rgba(129,140,248,0.14); }
+}
+
+/* Shimmer sweep across the card */
+.home-page .logo-glass-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(
+        105deg,
+        transparent 30%,
+        rgba(255, 255, 255, 0.06) 50%,
+        rgba(56, 189, 248, 0.08) 55%,
+        transparent 70%
+    );
+    animation: shimmerSweep 5s ease-in-out infinite;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Subtle top-edge highlight for glass depth */
+.home-page .logo-glass-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), rgba(56,189,248,0.3), rgba(255,255,255,0.18), transparent);
+    z-index: 2;
+    pointer-events: none;
+}
+
+@keyframes shimmerSweep {
+    0%   { left: -100%; opacity: 0; }
+    10%  { opacity: 1; }
+    50%  { left: 160%; opacity: 1; }
+    51%  { opacity: 0; }
+    100% { left: 160%; opacity: 0; }
+}
+
+/* The logo image itself — fully uncropped */
+.home-page .logo-glass-card img {
+    width: 88%;
+    height: 88%;
+    object-fit: contain;
+    display: block;
+    position: relative;
+    z-index: 0;
+    filter: drop-shadow(0 0 18px rgba(56, 189, 248, 0.3)) drop-shadow(0 0 6px rgba(129, 140, 248, 0.25));
+}
+
+
+
+/* Multi-Layered Concentric Water Ripples Expanding Underneath */
 .home-page .water-ripple-rings {
     position: absolute;
     bottom: -25px;
     left: 50%;
     transform: translateX(-50%);
-    width: 380px;
+    width: 360px;
+    max-width: 85vw;
     height: 50px;
     z-index: 1;
     pointer-events: none;
@@ -667,8 +790,8 @@ h2 {
     }
 
     100% {
-        width: 360px;
-        height: 75px;
+        width: 340px;
+        height: 70px;
         opacity: 0;
         border-color: rgba(129, 140, 248, 0);
     }
@@ -720,7 +843,7 @@ h2 {
     max-width: 1200px;
     margin: 50px auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
     gap: 32px;
 }
 
@@ -919,7 +1042,7 @@ h2 {
     max-width: 1200px;
     margin: 0 auto 60px auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 32px;
 }
 
@@ -948,6 +1071,7 @@ h2 {
 .skill-card img {
     width: 80px;
     height: 80px;
+    max-width: 100%;
     object-fit: contain;
     margin-bottom: 20px;
     transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -1094,7 +1218,7 @@ h2 {
 
 .social-links {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 28px;
     margin: 40px 0;
 }
@@ -1175,6 +1299,7 @@ h2 {
 
 .contact-form-card input,
 .contact-form-card textarea {
+    width: 100%;
     padding: 18px 22px;
     border-radius: 14px;
     border: 1px solid var(--border-card);
@@ -1324,7 +1449,7 @@ button.btn-success {
 }
 
 /* ===================================================
-   RESPONSIVE DESIGN
+   RESPONSIVE DESIGN & MOBILE OPTIMIZATIONS
 =================================================== */
 
 @media (max-width: 900px) {
@@ -1342,14 +1467,17 @@ button.btn-success {
         right: -100%;
         width: 270px;
         height: calc(100vh - var(--nav-height));
-        background: rgba(6, 9, 17, 0.96);
-        backdrop-filter: blur(24px);
+        background: rgba(6, 9, 17, 0.97);
+        backdrop-filter: blur(28px);
+        -webkit-backdrop-filter: blur(28px);
         flex-direction: column;
         align-items: flex-start;
         padding: 40px 30px;
         gap: 20px;
         border-left: 1px solid var(--border-card);
         transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        z-index: 1005;
+        box-shadow: -10px 0 40px rgba(0, 0, 0, 0.7);
     }
 
     .nav-links.active {
@@ -1364,17 +1492,15 @@ button.btn-success {
     .home-page .hero {
         flex-direction: column-reverse;
         text-align: center;
-        margin: 30px auto 50px auto;
-        gap: 40px;
+        margin: 20px auto 40px auto;
+        gap: 35px;
+        width: 92%;
+        overflow: hidden;
     }
 
     .home-page .hero-text h1,
     .home-page .hero-text h2 {
         text-align: center;
-    }
-
-    .home-page .hero-text h1 {
-        font-size: 3rem;
     }
 
     .home-page .hero-text h1::after {
@@ -1389,14 +1515,23 @@ button.btn-success {
         justify-content: center;
     }
 
+    /* Mobile Responsive Water Logo & Safe Mobile Animation */
     .home-page .profile-water-container {
-        width: 270px;
+        width: 240px;
         height: 270px;
+        max-width: 72vw;
+        animation: mobileFluidWaterFloat 6s cubic-bezier(0.37, 0, 0.63, 1) infinite alternate;
     }
 
-    .home-page .profile-water-image {
-        width: 230px;
-        height: 230px;
+    .home-page .logo-glass-card img {
+        width: 85%;
+        height: 85%;
+    }
+
+    .home-page .water-ripple-rings {
+        width: 240px;
+        max-width: 80vw;
+        bottom: -15px;
     }
 
     .timeline::before {
@@ -1421,20 +1556,63 @@ button.btn-success {
         margin-top: 0;
     }
 
-    h1,
-    .skills-heading {
-        font-size: 2.3rem;
+    .about-section,
+    .education-section,
+    .contact-section,
+    .projects-section,
+    .contact-form-card {
+        width: 92%;
+        padding: 32px 20px;
+    }
+}
+
+/* Mobile Drift Keyframes (Prevents horizontal layout expansion on phones) */
+@keyframes mobileFluidWaterFloat {
+    0% {
+        transform: translateX(-12px) translateY(-3px) rotate(-2deg);
+    }
+    50% {
+        transform: translateX(0px) translateY(3px) rotate(1deg);
+    }
+    100% {
+        transform: translateX(12px) translateY(-2px) rotate(-1.5deg);
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 0 4%;
     }
 
-    h2 {
-        font-size: 1.05rem;
+    .tagline {
+        font-size: 1.02rem;
+    }
+
+    .logo {
+        width: 38px;
+        height: 38px;
+    }
+
+    .home-page .hero-tags span {
+        font-size: 0.88rem;
+        padding: 8px 16px;
     }
 
     .about-section,
     .education-section,
     .contact-section,
     .projects-section,
-    .contact-form-card {
-        padding: 30px 22px;
+    .contact-form-card,
+    .home-page .home-overview {
+        padding: 24px 16px;
+        border-radius: 20px;
+    }
+
+    .back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 44px;
+        height: 44px;
+        font-size: 1.1rem;
     }
 }
